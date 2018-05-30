@@ -1,3 +1,4 @@
-/out/*
-/target/*
-/.idea/*
+
+src/main/webapp/public/imgs/
+/out/
+/target/
