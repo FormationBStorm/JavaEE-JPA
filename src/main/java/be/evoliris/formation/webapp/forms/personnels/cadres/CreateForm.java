@@ -1,13 +1,18 @@
-package be.evoliris.formation.webapp.forms.Cadre;
+package be.evoliris.formation.webapp.forms.personnels.cadres;
 
-import be.evoliris.formation.webapp.models.beans.Cadre;
+import be.evoliris.formation.webapp.models.beans.personnels.Cadre;
 import be.evoliris.formation.webapp.models.enums.CadreField;
+import be.evoliris.formation.webapp.repositories.salles.SalleRepository;
 
+import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CreateForm {
+    @EJB
+    private SalleRepository salleRepository;
+
     private String result;
     private Map<String, String> erreurs = new HashMap<>();
 
@@ -72,6 +77,9 @@ public class CreateForm {
             case DATE_ENTRE_FONCTION:
                 if(value == null)throw new Exception("La date est obligatoire");
                 if(!value.matches("\\d+-\\d+-\\d+"))throw new Exception("La doit doit être au format yyyy-MM-dd");
+                break;
+            case BUREAU:
+//                if(!value.matches("\\d+"))throw new Exception("Le bureau doit être une nombre");
                 break;
             default: break;
         }

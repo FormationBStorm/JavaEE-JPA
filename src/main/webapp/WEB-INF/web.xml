@@ -17,7 +17,7 @@
         <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
         <init-param>
             <param-name>TemplatePath</param-name>
-            <param-value>/views/</param-value>
+            <param-value>/</param-value>
         </init-param>
         <init-param>
             <param-name>NoCache</param-name>
@@ -83,7 +83,7 @@
     </servlet-mapping>
     <!--<servlet-mapping>-->
         <!--<servlet-name>ClientCreateServlet</servlet-name>-->
-        <!--&lt;!&ndash;<url-pattern>/cadres/createCadre</url-pattern>&ndash;&gt;-->
+        <!--<url-pattern>/cadres/createCadre</url-pattern>-->
     <!--</servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>freemarker</servlet-name>

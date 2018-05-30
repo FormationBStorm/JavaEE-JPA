@@ -14,6 +14,7 @@
             </#if>
         </div>
     </#list>
+
     <div class="form-group">
         <button type="submit" class="btn btn-lg btn-primary">Créer un cadre</button>
     </div>

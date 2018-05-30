@@ -1,4 +1,4 @@
-package be.evoliris.formation.webapp.repositories;
+package be.evoliris.formation.webapp.repositories.users;
 
 import be.evoliris.formation.webapp.models.User;
 

@@ -968,29 +968,106 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="243" parent="3" name="hibernate_sequence"/>
-    <table id="244" parent="3" name="user"/>
-    <column id="245" parent="243" name="next_val">
+    <table id="244" parent="3" name="personnel"/>
+    <table id="245" parent="3" name="salle"/>
+    <table id="246" parent="3" name="user"/>
+    <column id="247" parent="243" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="244" name="user_id">
+    <column id="248" parent="244" name="DTYPE">
+      <Position>1</Position>
+      <DataType>varchar(31)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="244" name="pers_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="244" name="adresse">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="244" name="dateEmploie">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="244" name="nom">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="244" name="prenom">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="244" name="salaire">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="244" name="cadre_bureau">
+      <Position>8</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="256" parent="244" name="FKodl83rm05rtddx6r54n8791cu">
+      <ColNames>cadre_bureau</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="257" parent="244" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pers_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="258" parent="244" name="FKodl83rm05rtddx6r54n8791cu">
+      <ColNames>cadre_bureau</ColNames>
+      <RefSchemaName>javaee</RefSchemaName>
+      <RefTableName>salle</RefTableName>
+      <RefColNames>salle_id</RefColNames>
+    </foreign-key>
+    <column id="259" parent="245" name="salle_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="245" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="261" parent="245" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>salle_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="262" parent="246" name="user_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="244" name="password">
+    <column id="263" parent="246" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="244" name="username">
+    <column id="264" parent="246" name="username">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="249" parent="244" name="PRIMARY">
+    <key id="265" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
