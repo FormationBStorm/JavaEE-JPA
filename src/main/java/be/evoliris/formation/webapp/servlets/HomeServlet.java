@@ -21,11 +21,11 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        User u = new User();
-        u.setUsername("Ruth");
-        u.setPassword("Biblop");
-
-        ur.insert(u);
+//        User u = new User();
+//        u.setUsername("Ruth");
+//        u.setPassword("Biblop");
+//
+//        ur.insert(u);
 
         req.getRequestDispatcher("home.ftl").forward(req, resp);
     }

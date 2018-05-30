@@ -1,7 +1,6 @@
 package be.evoliris.formation.webapp.models.enums;
 
 public enum CadreField {
-    ID("pers_id", "cadre identifiant", "text", false),
     NOM("pers_nom", "nom du cadre", "text", false),
     PRENOM("pers_prenom", "prenom du cadre", "text", false),
     SALAIRE("pers_salaire", "salaire du cadre", "number", false),

@@ -11,6 +11,7 @@
     <script type="application/javascript" src="/WebApp/public/js/bootstrap/bootstrap.min.js"></script>
 
     <link type="text/css" rel="stylesheet" href="/WebApp/public/css/bootstrap/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/WebApp/public/css/style.css">
 </head>
 <body>
     <div class="container">

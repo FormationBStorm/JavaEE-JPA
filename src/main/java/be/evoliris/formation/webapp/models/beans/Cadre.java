@@ -29,14 +29,23 @@ public class Cadre {
                 this.salaire = Double.parseDouble(value);
                 break;
             case DATE_ENTRE_FONCTION:
+                System.out.println(value);
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                try {
-                    this.dateEmploie = LocalDate.from(format.parse(value).toInstant());
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                this.dateEmploie = LocalDate.parse(value);
                 break;
             default: break;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Cadre{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", salaire=" + salaire +
+                ", dateEmploie=" + dateEmploie +
+                '}';
     }
 }

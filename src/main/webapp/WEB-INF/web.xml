@@ -8,6 +8,10 @@
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>be.evoliris.formation.webapp.servlets.HomeServlet</servlet-class>
     </servlet>
+    <!--<servlet>-->
+        <!--<servlet-name>ClientCreateServlet</servlet-name>-->
+        <!--<servlet-class>be.evoliris.formation.webapp.servlets.cadre.CreateServlet</servlet-class>-->
+    <!--</servlet>-->
     <servlet>
         <servlet-name>freemarker</servlet-name>
         <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
@@ -77,6 +81,10 @@
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern> </url-pattern>
     </servlet-mapping>
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>ClientCreateServlet</servlet-name>-->
+        <!--&lt;!&ndash;<url-pattern>/cadres/createCadre</url-pattern>&ndash;&gt;-->
+    <!--</servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>freemarker</servlet-name>
         <url-pattern>*.ftl</url-pattern>

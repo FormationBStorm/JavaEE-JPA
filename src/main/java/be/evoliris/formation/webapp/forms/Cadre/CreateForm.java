@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateFrom {
+public class CreateForm {
     private String result;
-    private Map<CadreField, String> erreurs = new HashMap<>();
+    private Map<String, String> erreurs = new HashMap<>();
 
-    public Cadre create(HttpServletRequest request){
+    public Cadre createCadre(HttpServletRequest request){
         Cadre cadre = new Cadre();
 
         CadreField[] cadreFields = CadreField.values();
@@ -41,14 +41,14 @@ public class CreateFrom {
     }
 
     private void addErreur(CadreField key, String message) {
-        this.erreurs.put(key, message);
+        this.erreurs.put(key.getDbName(), message);
     }
 
     public String getResult() {
         return result;
     }
 
-    public Map<CadreField, String> getErreurs() {
+    public Map<String, String> getErreurs() {
         return erreurs;
     }
 
@@ -63,7 +63,7 @@ public class CreateFrom {
                 if(value.length() < 5)throw new Exception("Le prenom doit être d'au moins 5 caractères");
                 break;
             case ADRESSE:
-                if(value != null && value.length() < 5)throw new Exception("L'adresse doit faire plus de 5 caractères");
+                if(value != null && !value.equals("") && value.length() < 5)throw new Exception("L'adresse doit faire plus de 5 caractères");
                 break;
             case SALAIRE:
                 if(value == null)throw new Exception("Le salaire du cadre est obligatoire");
@@ -79,5 +79,13 @@ public class CreateFrom {
 
     private static String getValueField(HttpServletRequest request, CadreField field){
         return request.getParameter(field.getDbName());
+    }
+
+    @Override
+    public String toString() {
+        return "CreateForm{" +
+                "result='" + result + '\'' +
+                ", erreurs=" + erreurs +
+                '}';
     }
 }
