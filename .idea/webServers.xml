@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9fe61bc4-d928-41e9-adfd-b43dbff8590c" name="ruth_deploiement" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\Users\Public\Share\Correction_Instant" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
